@@ -1,0 +1,135 @@
+body{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+}
+.loader {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+
+}
+
+.action {
+    margin-top: 10rem;
+    margin-left: 1rem;
+}
+
+.circle {
+    display: block;
+    position: absolute;
+    width: 1rem;
+    height:1rem;
+    border-radius:0.45rem;
+    
+}
+
+
+.top {
+    transform: translateX(-100%);
+    top: 0;
+    left:15px;
+    background-color:orange;
+    animation: left-to-right 2s ease-in-out 0s infinite forwards;
+    animation-play-state:paused;
+}
+
+.bottom {
+    transform: translateX(100%);
+    bottom: 1rem;
+    left:15px;
+    background-color:green;
+    animation: top-to-bottom 2s ease-in-out 0s infinite forwards;
+    animation-play-state: paused;
+}
+
+.left {
+    transform: translateY(100%);
+    right: 0;
+    top:0;
+    background-color:yellow;
+    animation: bottom-to-top 2s ease-in-out 0s infinite forwards;
+    animation-play-state: paused;
+}
+
+.right {
+    transform: translateY(-100%);
+    bottom: 15px;
+    right:0;
+    background-color:#40E0D0;
+    animation: right-to-left 2s ease-in-out 0s infinite forwards;
+    animation-play-state: paused;
+    
+}
+
+
+
+@keyframes left-to-right {
+    0% {
+        transform: translateX(0);
+        width: 1rem;
+    }
+    75% {
+        transform: translateX(0);
+        width: 5rem;
+        background-color:yellow;
+    }
+    100% {
+        transform: translateX(0);  
+        width:1rem;
+    }
+}
+
+@keyframes right-to-left {
+    0% {
+        transform: translateX(0);
+        width: 1rem;
+    }
+    75% {
+        transform: translateX(0);
+        width:5rem;
+        background-color:green;
+    }
+    100% {
+        transform: translateX(0);  
+        width:1rem;
+    }
+}
+
+@keyframes top-to-bottom {
+    0% {
+        transform: translateY(0);
+        height:1rem;
+    }
+    75% {
+        transform: translateY(0);
+        height:5rem;
+        background-color:orange;
+    }
+    100% {
+        transform: translateY(0);  
+        height:1rem;
+    }
+}
+
+@keyframes bottom-to-top {
+    0% {
+        transform: translateY(0);
+        heigth:1rem;
+    }
+    75% {
+        transform: translateY(0);
+        height:5rem;
+        background-color:#40E0D0;
+        
+    }
+    100% {
+        transform: translateY(0);   
+        height:1rem;
+    }
+}

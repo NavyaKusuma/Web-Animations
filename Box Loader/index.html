@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Loader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="loader">
+        <span id="top_circle" class="circle  top"></span>
+        <span id="bottom_circle" class="circle  bottom"></span>
+        <span id="left_circle" class="circle  left"></span>
+        <span id="right_circle" class="circle  right"></span>
+        
+    </div>
+    <div class="action">
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+    </div>
+
+
+    <script type="text/javascript">
+        function start() {
+            document.getElementById('top_circle').style.animationPlayState ='running';
+            document.getElementById('bottom_circle').style.animationPlayState ='running';
+            document.getElementById('left_circle').style.animationPlayState ='running';
+            document.getElementById('right_circle').style.animationPlayState ='running';
+        }
+
+        function stop() {
+            document.getElementById('top_circle').style.animationPlayState ='paused';
+            document.getElementById('bottom_circle').style.animationPlayState ='paused';
+            document.getElementById('left_circle').style.animationPlayState ='paused';
+            document.getElementById('right_circle').style.animationPlayState ='paused';
+        }
+
+    </script>
+</body>
+</html>
